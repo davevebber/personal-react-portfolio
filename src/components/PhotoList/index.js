@@ -15,9 +15,9 @@ const PhotoList = ({ category }) => {
       description: 'controls leds',
     },
     {
-      name: 'Car Design',
+      name: 'Movie Thumbs',
       category: 'projects',
-      description: 'car design',
+      description: 'a website built by me and some colleagues to help you pick a movie to watch',
     },
     {
       name: 'Run Buddy',
