@@ -2,10 +2,19 @@
 
 exports[`PhotoList is rendering renders 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="container mt-5"
+    data-test="container"
+  >
     <div
-      class="flex-row"
-    />
+      class="row mb-4"
+      data-test="row"
+    >
+      <div
+        class="col"
+        data-test="col"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
