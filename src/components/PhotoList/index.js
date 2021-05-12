@@ -1,50 +1,54 @@
 import React, { useState } from 'react';
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 const PhotoList = ({ category }) => {
 
   const [photos] = useState([
     {
-      name: 'Grocery aisle',
+      name: 'Calculator',
       category: 'projects',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'calculator app',
     },
     {
-      name: 'Grocery booth',
+      name: 'Led Lights',
       category: 'projects',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'controls leds',
     },
     {
-      name: 'Building exterior',
+      name: 'Car Design',
       category: 'projects',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'car design',
     },
     {
-      name: 'Restaurant table',
+      name: 'Run Buddy',
       category: 'projects',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'run buddy website',
     },
     {
-      name: 'Cafe interior',
+      name: 'Surf Report',
       category: 'projects',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      description: 'detailed surf report',
     },
   ]);
 
   const currentPhotos = photos.filter((photo) => photo.category === category);
 
   return (
-    <div>
-      <div className="flex-row">
-        {currentPhotos.map((image, i) => (
-          <img
-            src={require(`../../assets/${category}/${i}.jpg`)}
-            alt={image.name}
-            className="img-thumbnail mx-1"
-            key={image.name}
-          />
-        ))}
-      </div>
-    </div>
+
+    <MDBContainer className="mt-5">
+      <MDBRow className="mb-4">
+        <MDBCol>
+          {currentPhotos.map((image, i) => (
+            <img
+              src={require(`../../assets/${category}/${i}.jpg`)}
+              alt={image.name}
+              className="img-fluid"
+              key={image.name}
+            />
+          ))}
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
   );
 };
 
